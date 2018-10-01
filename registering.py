@@ -23,7 +23,6 @@ else:
 
 time.sleep(2)
 # Birth year check - process is in datetry.py
-import datetime
 date = datetime.datetime.now()
 currentyear = int(date.year)
 currentmonth = int(date.month)
@@ -36,7 +35,7 @@ monthofbirth = int(input("What is your birth month? Please enter two numbers (e.
 dayofbirth = int(input("What is your day of birth? Enter numbers 1 to 31."))
 
 if yearofbirth < yearcheck:
-	print("Thank you for your data, " + firstname + "! We promise a spam e-mail in your inbox on " + dayofbirth + "-" + monthofbirth + "-" + yearofbirth + "!")
+	print("Thank you for your data, " + firstname + "! We promise a spam e-mail in your inbox on your birthday!")
 
 elif yearofbirth == yearcheck:
 	print("Checking month...")
@@ -94,45 +93,42 @@ print (firstname + ", we have two last questions for you. We hope you will elabo
 time.sleep(1)
 
 def relationshipcheck():
-	global relationshippoints
-	relationshippoints = int(0)
-	relationship = input("Are you currently in a relationship? Yes/No").lower()
-	if relationship == "yes":
-		print ("Wow, nice one " + firstname + "! Ask your SO to join DataForMoney© too! It's better together!")
-		relationshippoints = int(1000)
+    relationshippoints = int(0)
+    
+    relationship = input("Are you currently in a relationship? Yes/No").lower()
+    if relationship == "yes":
+        print ("Wow, nice one " + firstname + "! Ask your SO to join DataForMoney© too! It's better together!")
+        relationshippoints = int(1000)
+    elif relationship == "no":
+        print ("Too bad " + firstname + "! Maybe you'll meet someone on our platform, it's not all bots!")
+        relationshippoints = int(200)
+    else:
+        print ("Sorry " + firstname + ". We don't know what you mean by that. Let's try again.")
+        relationshipcheck()
+    return relationshippoints
 
-	elif relationship == "no":
-		print ("Too bad " + firstname + "! Maybe you'll meet someone on our platform, it's not all bots!")
-		relationshippoints = int(200)
-
-	else:
-		print ("Sorry " + firstname + ". We don't know what you mean by that. Let's try again.")
-		relationshipcheck()
-
-relationshipcheck()
+rpoints = relationshipcheck()
 
 time.sleep(2)
 
 def subscriptioncheck():
-	global subscriptionpoints
 	subscription = input("Would you like to pay for our DataForMoney© Premium™ subscription? Yes/No").lower()
 	if subscription == "yes":
 		print ("Good choice. Don't worry, we already datamined your credit card data. It's safe with us, " + firstname + "!")
 		subscriptionpoints = int(1000)
-
 	elif subscription == "no":
 		print ("We already know your credit card data anyways, " + firstname + ". Interesting Amazon purchase history.")
 		subscriptionpoints = int(0)
-
 	else:
 		print ("Sorry " + firstname + ". We don't know what you mean by that. Let's try again.")
 		subscriptioncheck()
+	return subscriptionpoints
 
-subscriptioncheck()
+spoints = subscriptioncheck()
 
 # Calculate value
 birthdate = dayofbirth + monthofbirth + yearofbirth
-value = birthdate + subscriptionpoints + genderpoints + relationshippoints
+value = birthdate + spoints + genderpoints + rpoints
 
 print("Now calculating point value...")
 time.sleep(2)
