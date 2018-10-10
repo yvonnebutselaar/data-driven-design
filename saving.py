@@ -1,58 +1,74 @@
 #read politicians file
-politicians = open("politicians.csv")
-
+politicians = open("politicians.csv", "r")
+list = []
 #change .csv file into a list
 #Assign variables to list parts and print the full sentences.
 #Added index so you can see who is at what spot in the list.
 index = 0
 for line in politicians:
-    list = line.split(",")
-    firstname = list[0]
-    lastname = list[1]
-    birthyear = list[2]
-    party = list[3][:-1]
-    print(str(index) + ":" + firstname + " " + lastname + " was born in " + birthyear + " and a member of the " + party + ".")
+    list.append(line.split(","))
+    firstname = list[index][0]
+    lastname = list[index][1]
+    birthyear = list[index][2]
+    party = list[index][3]
+    print(str(index) + ":" + firstname + " " + lastname + " was born in " + birthyear + " and a member of " + party)
     index = index + 1
-    
+
+print("This file has " + str(index) + " entries.")
 politicians.close()
 
-#Function to make changes to the list. I chose a function to make it repeatable, so users put in the right commands.)
-def chooseyouraction():
-    choice = input("What do you want to do with this list? remove/add/save/quit")
-    #Remove: Removes list part based on index number.
-    if choice == "remove":
+def change():
+    choice = input("What do you want to do with this list? add/remove/save/quit")
+    
+    #adding to list by appending the entry to the list
+    #So the way i'm doing it is the input is being put into a list (since we're using a list in a list.)
+    #Then we append the split input to the masterlist.
+    if choice == "add":
+        add = input("Add your politician. Type firstname,lastname,birthyear,party")
+        adl = add.split(",")
+        list.append(adl)
+        print("This politician has been added.")
+        change()
+        
+    #removing by removing an entry from the list using .pop    
+    elif choice == "remove":
+        delindex = input("Enter the number of the politician you want to remove.") 
         index = 0
-        print("Type the index number of the politician who you would like to remove.")
-        remove = int(input("Enter your number here."))
-        for lines in list:
-            list.pop(remove)
-            print("Line " + str(remove) + " has been succesfully removed.")
-            index = index + 1
-        chooseyouraction()
-    
-    elif choice == "add":
-        print("Who do you want to add to the list?")
-        adding = input("Enter first name, last name, birthyear and party. Seperate with commas. For instance Mark,Rutte,1967,VVD").split(",")
-        list.append(adding)
-        print("Your addition has been added to the list.")
-        chooseyouraction()
-    
+        for line in list:
+            if delindex == index:
+                list.remove(delindex)
+                print("Number " + str(delindex) + " has been removed.")
+                index = index + 1
+        
+            else:
+                print("Error, please try again")
+                change()
+        
+    #save to file
+    #By using the * in the print statement I can print the strings to the csv file instead of the list.
     elif choice == "save":
-        pol = open("politicians.csv", "w")
-        index = 0
-        print("The programme will now save your changes.")
-        for li in pol:
-            pol.write(li)
-            index = index + 1   
-        pol.close()
-        chooseyouraction()             
-    
+        politicians = open("politicians.csv", "w")
+        for line in list:
+            s = ","
+            politicians.write(s.join(line))
+        politicians.close()
+        print("File saved!")
+        change()
+        
+    #Closes the programme    
     elif choice == "quit":
-        print("The programme will now exit.")
+        print("The programme is quitting")
         exit()
-    
+        
+    #To check the list
+    elif choice == "print":
+        print(list)
+        change()
+        
+    #repeats the function if the input isn't recognized.
     else:
         print("Unrecognized command. Please try again.")
-        chooseyouraction()
+        change()
         
-chooseyouraction()
+change()
+
