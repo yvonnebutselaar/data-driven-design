@@ -1,3 +1,5 @@
+
+
 friends = ["Donald", "Teresa", "Willem"]
 snacks = []
 
