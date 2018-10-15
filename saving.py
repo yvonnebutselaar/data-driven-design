@@ -1,16 +1,16 @@
 #read politicians file
 politicians = open("politicians.csv", "r")
-list = []
+person = []
 #change .csv file into a list
 #Assign variables to list parts and print the full sentences.
 #Added index so you can see who is at what spot in the list.
 index = 0
 for line in politicians:
-    list.append(line.split(","))
-    firstname = list[index][0]
-    lastname = list[index][1]
-    birthyear = list[index][2]
-    party = list[index][3]
+    person.append(line.split(","))
+    firstname = person[index][0]
+    lastname = person[index][1]
+    birthyear = person[index][2]
+    party = person[index][3]
     print(str(index) + ":" + firstname + " " + lastname + " was born in " + birthyear + " and a member of " + party)
     index = index + 1
 
@@ -26,29 +26,22 @@ def change():
     if choice == "add":
         add = input("Add your politician. Type firstname,lastname,birthyear,party")
         adl = add.split(",")
-        list.append(adl)
+        person.append(adl)
         print("This politician has been added.")
         change()
         
-    #removing by removing an entry from the list using .pop    
-    elif choice == "remove":
-        delindex = input("Enter the number of the politician you want to remove.") 
-        index = 0
-        for line in list:
-            if delindex == index:
-                list.remove(delindex)
-                print("Number " + str(delindex) + " has been removed.")
-                index = index + 1
-        
-            else:
-                print("Error, please try again")
-                change()
-        
+    #removing by removing an entry from the list   
+    elif choice == "remove": 
+        num = input("Enter the number of the entry you want to remove.")
+        person.pop(int(num))
+        print(f"Entry {num} has been removed.")
+        change()
+
     #save to file
     #By using the * in the print statement I can print the strings to the csv file instead of the list.
     elif choice == "save":
         politicians = open("politicians.csv", "w")
-        for line in list:
+        for line in person:
             s = ","
             politicians.write(s.join(line))
         politicians.close()
@@ -62,7 +55,7 @@ def change():
         
     #To check the list
     elif choice == "print":
-        print(list)
+        print(person)
         change()
         
     #repeats the function if the input isn't recognized.
@@ -71,4 +64,3 @@ def change():
         change()
         
 change()
-

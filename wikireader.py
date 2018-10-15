@@ -4,11 +4,10 @@ import json
 from IPython.display import display, Image
 
 #Name all info we need
-art = input("What article do you want to read?").replace(" ", "_")
+art = input("What article do you want to read?").strip().replace(" ", "_")
 url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{art}"
 req = requests.get(url)
 data = json.loads(req.text)
-status = req.status_code
 
 #Variables for our headers
 title = data["title"]
@@ -17,7 +16,7 @@ extr = data["extract"]
 thumb = data["originalimage"]["source"]
 img = Image(url = thumb)
 
-if status == 200:
+if req.status_code == 200:
     print("Website is online! We'll proceed!")
     
     print("Title:", title)
@@ -27,7 +26,7 @@ if status == 200:
     display(img)
     
 else:
-    print("Error! We're receiving an error " + str(status))
+    print(f"Error! We're receiving an error " {req.status_code})
     
 
 
