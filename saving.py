@@ -53,7 +53,7 @@ def change():
         print("The programme is quitting")
         exit()
         
-    #To check the list
+    #To check the list -- this is just to test the list for myself.
     elif choice == "print":
         print(person)
         change()
