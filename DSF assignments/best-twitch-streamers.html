@@ -1,0 +1,3283 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d700509639","applicationID":"42138403","transactionName":"IQpYTUFaW19TS04BDAMLWFxfaltWV10EEAYNBERdQBpHXEZMDQMWCxFP","queueTime":5,"applicationTime":4136,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="hSUwwzt6f2A4bHTYsIAZ3VDfvpxedcdnrZ28MMHvo2wVKuAAY1CiIRWOzEXovwRNAv5wSzSyTYFlzk6xOIK8dg==" />
+
+  <title>The Most Popular Twitch Streamers, October 2018</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" media="all" href="/assets/application-ccfe68322ae45672bbcec00f31b1c48be535334665aeb6e7328ae2b3eee6fd3b.css" />
+
+  <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- GA tracking code -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-74931546-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Hotjar Tracking Code for www.twitchmetrics.net -->
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:438796,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+  <script src="/assets/application-75fbda1bcd46a55130cc2fb41003ce540c9ffddd6b0f9f30fef174accc22b89e.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand mr-4" href="/">
+      <img height="22" alt="Twitchmetrics" src="/assets/twitchmetrics-logo-6aa4549289f04a4799e392748a8897f445d54ed36fdb5c3f48b6b45865728402.png" />
+</a>    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="navbar-nav mr-6 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/emotes">Emotes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/games/viewership">Game Leaderboards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/channels/viewership">Channel Leaderboards</a>
+        </li>
+      </ul>
+      <div class="flex-fill">
+          <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />    <div class="d-flex">
+      <input placeholder="Look up channels or games" value="" required="required" minlength="3" class="form-control squared-right" type="text" name="q" id="q" />
+      <button type="submit" class="btn btn-warning squared-left">
+        <i class="fas fa-search"></i>
+</button>    </div>
+</form>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <div id="flash-notice" class="flash" style="display:none;">
+      <div class="alert alert-primary alert-dismissable d-inline-block">
+        <span class="flash-content mr-2">
+          something is happening
+        </span>
+        <button type="button" class="close" data-dismiss="alert">
+          <span>&times;</span>
+        </button>
+      </div>
+    </div>
+    <div id="flash-alert" class="flash " style="display:none;">
+      <div class="alert alert-warning alert-dismissable d-inline-block">
+        <span class="flash-content mr-2">
+          
+        </span>
+        <button type="button" class="close" data-dismiss="alert">
+          <span>&times;</span>
+        </button>
+      </div>
+    </div>
+
+    <script>
+    </script>
+  </div>
+
+
+
+
+  <div class="container mt-5">
+    <div class="mb-5 text-center">
+      <h2 class="mb-2">The Most Popular   Twitch Streamers, October 2018</h2>
+      <p class="mb-3">Ranked by the average concurrent viewers while live in the last 7 days</p>
+      <div class="mb-4 d-flex justify-content-center text-muted">
+        <span class="mx-4"><i class="far fa-clock"></i> Last updated <time class="time_ago" datetime="2018-10-26T13:45:40Z">Fri, Oct 26 at 13:45</time></span>
+      </div>
+      <div class="btn-group d-none d-sm-block">
+      <a class="btn btn-light text-primary" href="/channels/viewership">Most Watched</a>
+    <a class="btn btn-light text-primary" href="/channels/growth">Fastest Growing</a>
+    <a class="btn btn-light text-primary" href="/channels/peak">Highest Peak Viewership</a>
+    <a class="btn active btn-primary" aria-current="page" href="/channels/popularity">Most Popular</a>
+    <a class="btn btn-light text-primary" href="/channels/follower">Most Followed</a>
+
+</div>
+<div class="btn-group-vertical d-sm-none">
+      <a class="btn btn-light text-primary" href="/channels/viewership">Most Watched</a>
+    <a class="btn btn-light text-primary" href="/channels/growth">Fastest Growing</a>
+    <a class="btn btn-light text-primary" href="/channels/peak">Highest Peak Viewership</a>
+    <a class="btn active btn-primary" aria-current="page" href="/channels/popularity">Most Popular</a>
+    <a class="btn btn-light text-primary" href="/channels/follower">Most Followed</a>
+
+</div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-10">
+          <ul class="list-group">
+              <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#1</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/36029255-riotgames">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/7033f472-a834-43ff-bf5c-c589e8e35593-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/36029255-riotgames">
+          <h5 class="mr-2 mb-0">Riot Games</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-21T22:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/riotgames&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sun, Oct 21 at 22:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">142,192</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>61%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 100.0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#2</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/55125740-fortnite">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/4e606d41-b06d-4ca6-ad7e-8a4dda56a305-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/55125740-fortnite">
+          <h5 class="mr-2 mb-0">Fortnite</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-20T00:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/fortnite&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sat, Oct 20 at  0:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">79,386</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>15%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 55.830417092258216%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#3</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/19571641-ninja">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/cef31105-8a6e-4211-a74b-2f0bbd9791fb-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/19571641-ninja">
+          <h5 class="mr-2 mb-0">Ninja</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T18:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/ninja&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 18:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">61,483</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>3%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 43.239560310248336%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#4</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/60056333-tfue">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/2470b5c6-a737-4ba6-8987-c28e0ca839e1-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/60056333-tfue">
+          <h5 class="mr-2 mb-0">Tfue</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T22:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tfue&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 22:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">49,448</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>0%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 34.77585820216033%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#5</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/190835892-lck_korea">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/69ead2c6-2e23-4ec3-bb9b-5a866c03cc21-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/190835892-lck_korea">
+          <h5 class="mr-2 mb-0">LCK_Korea</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          KO
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-21T10:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/lck_korea&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sun, Oct 21 at 10:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">45,917</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>14%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 32.29207971713972%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#6</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/37402112-shroud">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/37402112-shroud">
+          <h5 class="mr-2 mb-0">shroud</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T02:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/shroud&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  2:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">43,725</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>21%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 30.750476978907727%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#7</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/52130765-squeezielive">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/squeezielive-profile_image-8ac640b6a1c398f8-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/52130765-squeezielive">
+          <h5 class="mr-2 mb-0">Squeezielive</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          FR
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/18846-garry-s-mod">
+                          Garry&#39;s Mod
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T22:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/squeezielive&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 22:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">40,429</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>64%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 28.432626342457183%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#8</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/209760502-pubgmobile">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1d583b02-72c6-4058-8d80-6785062f5e29-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/209760502-pubgmobile">
+          <h5 class="mr-2 mb-0">pubgmobile</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/505884-pubg-mobile">
+                          PUBG MOBILE
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-21T22:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/pubgmobile&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sun, Oct 21 at 22:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">33,999</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 23.910989894379593%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#9</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/31557216-warframe">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1d464ec0-52c7-400b-8cd9-c3a734c6ac24-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/31557216-warframe">
+          <h5 class="mr-2 mb-0">Warframe</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/66170-warframe">
+                          Warframe
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-23T21:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/warframe&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Tue, Oct 23 at 21:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">26,490</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>192%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 18.62984948692005%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#10</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/127651530-tsm_daequan">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/72b25194-8f6a-4034-97f0-150c6be52321-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/127651530-tsm_daequan">
+          <h5 class="mr-2 mb-0">TSM_Daequan</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T07:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tsm_daequan&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  7:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">25,931</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>10%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 18.23669593553927%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#11</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/15564828-nickmercs">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1aba0e3b-069c-486f-af71-5371308eeee1-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/15564828-nickmercs">
+          <h5 class="mr-2 mb-0">NICKMERCS</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T07:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/nickmercs&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  7:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">25,689</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>20%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 18.06664612757583%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#12</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/24147592-gotaga">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/645dc415-7d8c-4a0d-92a6-586995c0db5f-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/24147592-gotaga">
+          <h5 class="mr-2 mb-0">Gotaga</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          FR
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T18:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/gotaga&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 18:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">25,552</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>29%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 17.970222467800934%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#13</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/17337557-drdisrespectlive">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/710c3ca784e2941d-profile_image-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/17337557-drdisrespectlive">
+          <h5 class="mr-2 mb-0">DrDisRespectLIVE</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/504462-call-of-duty-black-ops-4">
+                          Call of Duty: Black Ops 4
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T23:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/drdisrespectlive&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 23:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">24,346</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>28%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 17.121812994940626%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#14</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/100814397-dota2ruhub">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/78083f72c30469e7-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/100814397-dota2ruhub">
+          <h5 class="mr-2 mb-0">Dota2RuHub</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          RU
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/29595-dota-2">
+                          Dota 2
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T14:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/dota2ruhub&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at 14:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">23,454</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 16.494370127082504%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#15</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/168843586-primevideo">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/c846974a-ee87-4747-a6ea-66d7e35c3464-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/168843586-primevideo">
+          <h5 class="mr-2 mb-0">primevideo</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/509671-sports-fitness">
+                          Sports &amp; Fitness
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T04:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/primevideo&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  4:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">22,137</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>54%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 15.56870487179718%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#16</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/45044816-montanablack88">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/61f85a70-33e9-4144-b08a-bee144d444dc-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/45044816-montanablack88">
+          <h5 class="mr-2 mb-0">MontanaBlack88</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          DE
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T23:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/montanablack88&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at 23:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">21,708</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>17%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 15.2669047537957%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#17</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/26261471-asmongold">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/asmongold-profile_image-f7ddcbd0332f5d28-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/26261471-asmongold">
+          <h5 class="mr-2 mb-0">Asmongold</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/18122-world-of-warcraft">
+                          World of Warcraft
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T00:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/asmongold&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  0:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">21,506</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>6%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 15.124914405261462%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#18</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/39298218-dakotaz">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/473aea0f-a724-498f-b7f1-e344f806ba8a-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/39298218-dakotaz">
+          <h5 class="mr-2 mb-0">dakotaz</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T14:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/dakotaz&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at 14:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">21,342</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>29%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 15.009323055228572%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#19</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/26301881-sodapoppin">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/sodapoppin-profile_image-10049b6200f90c14-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/26301881-sodapoppin">
+          <h5 class="mr-2 mb-0">sodapoppin</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T22:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/sodapoppin&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at 22:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">21,091</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>5%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 14.832927887269403%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#20</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/48937001-blizzheroes">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/5fa86841e515734e-profile_image-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/48937001-blizzheroes">
+          <h5 class="mr-2 mb-0">Heroes of the Storm (blizzheroes)</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/32959-heroes-of-the-storm">
+                          Heroes of the Storm
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T00:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/blizzheroes&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  0:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">20,678</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>1,980%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 14.54265357667356%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#21</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/36769016-timthetatman">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/timthetatman-profile_image-4cb867e7d0af1448-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/36769016-timthetatman">
+          <h5 class="mr-2 mb-0">TimTheTatman</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T18:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/timthetatman&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 18:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">19,741</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>1%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 13.883202435235743%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#22</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/268522402-tvbersamaafc">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/268522402-tvbersamaafc">
+          <h5 class="mr-2 mb-0">tvbersamaafc</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T13:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tvbersamaafc&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at 13:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">18,701</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 13.152091677253585%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#23</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/64342766-trymacs">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/trymacs-profile_image-3c2ac4643bab750a-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/64342766-trymacs">
+          <h5 class="mr-2 mb-0">Trymacs</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          DE
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T20:10:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/trymacs&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 20:10</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">18,209</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>84%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 12.805759450713188%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#24</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/266436973-tvonlineid4">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/4cbf10f1-bb9f-4f57-90e1-15bf06cfe6f5-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/266436973-tvonlineid4">
+          <h5 class="mr-2 mb-0">tvonlineid4</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-21T12:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tvonlineid4&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sun, Oct 21 at 12:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">17,960</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 12.631022371851666%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#25</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/57781936-rocketleague">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/a673d8d4-9b85-40b7-8cbd-7e7214b8e9b4-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/57781936-rocketleague">
+          <h5 class="mr-2 mb-0">RocketLeague</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/30921-rocket-league">
+                          Rocket League
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T03:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/rocketleague&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at  3:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">17,765</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>48%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 12.493975543435745%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#26</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/141981764-twitchdev">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/twitchdev-profile_image-d2f9d60c77c1505a-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/141981764-twitchdev">
+          <h5 class="mr-2 mb-0">TwitchDev</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/509670-science-technology">
+                          Science &amp; Technology
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T00:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/twitchdev&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  0:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">17,335</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 12.19106429338447%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#27</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/47071880-yoda">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/yoda-profile_image-63cdc656c9f91fb4-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/47071880-yoda">
+          <h5 class="mr-2 mb-0">YoDa</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          PT
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T18:20:02Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/yoda&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 18:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">16,970</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>19%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 11.93492142666278%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#28</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/12875057-gronkh">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/gronkh-profile_image-76b34139eaa46bb5-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/12875057-gronkh">
+          <h5 class="mr-2 mb-0">GRONKH</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          DE
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T14:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/gronkh&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at 14:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">16,737</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>8%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 11.770961948195811%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#29</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/52091823-castro_1021">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/1894f0796c2a77f4-profile_image-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/52091823-castro_1021">
+          <h5 class="mr-2 mb-0">Castro_1021</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/506103-fifa-19">
+                          FIFA 19
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T00:10:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/castro_1021&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  0:10</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,964</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>0%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 11.227156039754485%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#30</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/268512726-casinoexplorer24">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/c31389c0-4261-4ff4-b525-da998a634c8d-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/268512726-casinoexplorer24">
+          <h5 class="mr-2 mb-0">casinoexplorer24</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/509576-casino">
+                          Casino
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-21T15:50:01Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/casinoexplorer24&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sun, Oct 21 at 15:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,881</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 11.168441606402338%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#31</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/266416235-vasdgf2323">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/266416235-vasdgf2323">
+          <h5 class="mr-2 mb-0">vasdgf2323</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-23T19:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/vasdgf2323&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Tue, Oct 23 at 19:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,718</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>14,870%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 11.054217775986425%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#32</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/501281-callofduty">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6595a213-0fa2-4ecd-b203-82a0bc974816-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/501281-callofduty">
+          <h5 class="mr-2 mb-0">Call of Duty</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/504462-call-of-duty-black-ops-4">
+                          Call of Duty: Black Ops 4
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-19T23:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/callofduty&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 19 at 23:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,620</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10.985413888398725%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#33</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/51496027-loltyler1">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/f3591dbe4ee3d94b-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/51496027-loltyler1">
+          <h5 class="mr-2 mb-0">loltyler1</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T09:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/loltyler1&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at  9:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,499</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>19%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10.900292269910985%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#34</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/38244180-alanzoka">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/c46b05a0-db41-4c66-b736-3ff018df99ec-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/38244180-alanzoka">
+          <h5 class="mr-2 mb-0">alanzoka</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          PT
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T03:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/alanzoka&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at  3:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,254</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>19%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10.728080069291906%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#35</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/26490481-summit1g">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/200cea12142f2384-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/26490481-summit1g">
+          <h5 class="mr-2 mb-0">summit1g</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T06:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/summit1g&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at  6:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,054</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>2%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10.587053488673332%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#36</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/36473331-coscu">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/coscu-profile_image-1f50f62a65abb02c-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/36473331-coscu">
+          <h5 class="mr-2 mb-0">coscu</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          ES
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T00:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/coscu&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at  0:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">15,003</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10.551187513684573%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#37</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/268508855-tvbersamatimnas">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/b83b1794-7df9-4878-916c-88c2ad2e4f9f-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/268508855-tvbersamatimnas">
+          <h5 class="mr-2 mb-0">tvbersamatimnas</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-21T13:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tvbersamatimnas&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sun, Oct 21 at 13:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">14,666</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10.314488074852338%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#38</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/23161357-lirik">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/7a75bd89-ecbf-4974-bc1f-6b967213595f-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/23161357-lirik">
+          <h5 class="mr-2 mb-0">LIRIK</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T23:10:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/lirik&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at 23:10</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">14,219</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>26%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.999970534155288%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#39</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/22346597-lvpes">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/lvpes-profile_image-b9a288b926641fe4-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/22346597-lvpes">
+          <h5 class="mr-2 mb-0">LVPes</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          ES
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-22T07:10:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/lvpes&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Mon, Oct 22 at  7:10</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">14,102</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>21%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.917353865727858%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#40</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/269129417-casinodaily24">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/821040e0-c0a1-44c8-9d9f-c5c181387045-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/269129417-casinodaily24">
+          <h5 class="mr-2 mb-0">casinodaily24</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/509576-casino">
+                          Casino
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T16:20:01Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/casinodaily24&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at 16:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">14,059</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.887489424417302%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#41</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/266437651-tvonlineid444">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/cd618d3e-f14d-4960-b7cf-094231b04735-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/266437651-tvonlineid444">
+          <h5 class="mr-2 mb-0">tvonlineid444</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T13:10:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tvonlineid444&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at 13:10</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">14,045</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.877178626558011%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#42</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/268145775-ghjy2346f">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/49988c7b-57bc-4dee-bd4f-6df4ad215d3a-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/268145775-ghjy2346f">
+          <h5 class="mr-2 mb-0">ghjy2346f</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-20T12:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/ghjy2346f&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sat, Oct 20 at 12:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">13,573</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.54557239755252%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#43</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/268681684-casinodude24">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/fdd5eef6-906e-4730-98c0-77e01a621470-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/268681684-casinodude24">
+          <h5 class="mr-2 mb-0">casinodude24</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/509576-casino">
+                          Casino
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-22T19:50:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/casinodude24&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Mon, Oct 22 at 19:50</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">13,562</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.537766028023835%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#44</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/57793021-lolitofdez">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/413914fa70ed23a0-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/57793021-lolitofdez">
+          <h5 class="mr-2 mb-0">LOLITOFDEZ</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          ES
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-22T22:00:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/lolitofdez&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Mon, Oct 22 at 22:00</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">13,210</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>5%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.29036575408428%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#45</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/44445592-pokimane">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6faa5a7174a604bf-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/44445592-pokimane">
+          <h5 class="mr-2 mb-0">pokimane</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/33214-fortnite">
+                          Fortnite
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T00:30:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/pokimane&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at  0:30</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">13,194</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>17%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 9.279157411481311%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#46</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/268511916-tvbersamau19">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/268511916-tvbersamau19">
+          <h5 class="mr-2 mb-0">tvbersamau19</h5>
+</a>      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-24T12:20:02Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/tvbersamau19&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Wed, Oct 24 at 12:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">12,494</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 8.786807344895081%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#47</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/103825127-hanryang1125">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/hanryang1125-profile_image-58261d78af47d249-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/103825127-hanryang1125">
+          <h5 class="mr-2 mb-0">풍월량 (hanryang1125)</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          KO
+        </div>
+        <div class="mr-3">
+                        Variety
+
+        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-26T14:20:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/hanryang1125&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Fri, Oct 26 at 14:20</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">12,351</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>8%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 8.686178008816105%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#48</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/131467146-toyzttv">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/af9c14d2-3261-474d-823c-a95cc4c932fa-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/131467146-toyzttv">
+          <h5 class="mr-2 mb-0">矮子娃娃 (toyzttv)</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          ZH
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/21779-league-of-legends">
+                          League of Legends
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-23T16:40:01Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/toyzttv&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Tue, Oct 23 at 16:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">11,993</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 8.434571292783229%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#49</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/57378374-lngliveofficial">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6fa5de3e-364d-4670-ad77-6146e0cebbf1-profile_image-300x300.png" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/57378374-lngliveofficial">
+          <h5 class="mr-2 mb-0">lngliveofficial</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          ZH
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/417752-talk-shows-podcasts">
+                          Talk Shows &amp; Podcasts
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-20T19:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/lngliveofficial&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Sat, Oct 20 at 19:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">11,958</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-up text-success fa-fw"></i>&infin;</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 8.409461123803812%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item d-block py-4">
+  <div class="row">
+    <div class="col-9">
+      <div class="row">
+        <div class="col-1">
+          <span class="text-muted">#50</span>
+        </div>
+        <div class="col-11">
+            <div class="d-flex align-items-start">
+    <div class="col-3 col-lg-2 px-0">
+      <a href="/c/13240194-scump">
+        <img class="rounded mr-0 mr-sm-3 img-fluid" src="https://static-cdn.jtvnw.net/jtv_user_pictures/scump-profile_image-bbaf98441dd6e786-300x300.jpeg" />
+</a>    </div>
+    <div class="col-9 col-lg-10">
+      <div class="d-flex mb-2 flex-wrap">
+        <a href="/c/13240194-scump">
+          <h5 class="mr-2 mb-0">scump</h5>
+</a>          <div class="text-muted mr-2"><i class="fab fa-twitch"></i> Partner</div>
+      </div>
+      <div class="text-muted d-flex flex-wrap">
+        <div class="mr-3">
+          EN
+        </div>
+        <div class="mr-3">
+            <a class="link-natural" href="/g/504462-call-of-duty-black-ops-4">
+                          Call of Duty: Black Ops 4
+
+</a>        </div>
+        <div>
+          <time class="time_ago" datetime="2018-10-25T08:40:00Z" data-prefix="Seen " data-recent-mins="11" data-recent-content="            <a target=&quot;_blank&quot; href=&quot;https://www.twitch.tv/scump&quot;>
+              <i class=&quot;fas fa-circle text-danger&quot;></i> LIVE
+</a>">Seen  Thu, Oct 25 at  8:40</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3 text-right">
+      <div class="text-center">
+        <div class="mb-2">
+          <div>
+            <samp style="font-size: 1.1em">11,898</samp>
+              <div class="font-lg">
+                <span class="badge badge-light"><i class="fas fa-caret-down text-danger fa-fw"></i>19%</span>
+              </div>
+          </div>
+          avg viewers
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 8.36735786103563%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+
+          </ul>
+        <div class="d-flex justify-content-center my-4">
+            <nav class="pagination" role="navigation" aria-label="pager">
+    
+          <li class="page-item active">
+    <a remote="false" class="page-link">1</a>
+  </li>
+
+          <li class="page-item">
+    <a rel="next" class="page-link" href="/channels/popularity?page=2">2</a>
+  </li>
+
+          <li class="page-item">
+    <a class="page-link" href="/channels/popularity?page=3">3</a>
+  </li>
+
+          <li class="page-item">
+    <a class="page-link" href="/channels/popularity?page=4">4</a>
+  </li>
+
+          <li class="page-item">
+    <a class="page-link" href="/channels/popularity?page=5">5</a>
+  </li>
+
+      <li class="page-item">
+  <a rel="next" class="page-link" href="/channels/popularity?page=2">Next &rsaquo;</a>
+</li>
+
+  </nav>
+
+        </div>
+      </div>
+      <div class="col-12 col-md-2">
+        <div class="mb-4">
+          <h6>Language</h6>
+          <ul class="nav nav-pills flex-column">
+    <a class="nav-link py-1 active" aria-current="page" href="/channels/popularity">All</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=en">English</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=ko">한국어</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=ru">русский</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=de">Deutsch</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=zh">汉语</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=fr">français</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=pt">Português</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=es">Español</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=sv">Svenska</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=nl">Nederlands</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=ja">日本語</a>
+    <a class="nav-link py-1" href="/channels/popularity?lang=pl">polski</a>
+</ul>
+        </div>
+        <div class="mb-4">
+          <h6>Game</h6>
+          <ul class="nav nav-pills flex-column">
+    <a class="nav-link py-1 active" aria-current="page" href="/channels/popularity">All</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=0">Variety</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=1">League of Legends</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=9527">Fortnite</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=47208">Call of Duty: Black Ops 4</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=474687">Just Chatting</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=5">Dota 2</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=3">Counter-Strike: Global Offensive</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=4">Hearthstone</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=14">World of Warcraft</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=21271">PLAYERUNKNOWN&#39;S BATTLEGROUNDS</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=50465">FIFA 19</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=22">Overwatch</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=4472">Casino</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=23132">Red Dead Redemption 2</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=2317">Dead by Daylight</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=38">Grand Theft Auto V</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=38044">Soulcalibur VI</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=57">Magic: The Gathering</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=37040189">Thronebreaker: The Witcher Tales</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=29">Tom Clancy&#39;s Rainbow Six: Siege</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=31161">Destiny 2</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=33">Music &amp; Performing Arts</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=43">Rust</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=36389">Always On</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=11">Talk Shows &amp; Podcasts</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=50752">Assassin&#39;s Creed Odyssey</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=1394">Old School RuneScape</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=12">Minecraft</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=19">Heroes of the Storm</a>
+    <a class="nav-link py-1" href="/channels/popularity?game=283956">Art</a>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer py-5 mt-5">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-md-4 col-12 mb-3 mb-md-0">
+        <select class="form-control bg-dark text-light" name="tz" id="timezone_select">
+          <option value="Pacific/Midway">(UTC-11:00) Midway Island, American Samoa</option>
+          <option value="America/Adak">(UTC-10:00) Aleutian Islands</option>
+          <option value="Pacific/Honolulu">(UTC-10:00) Hawaii</option>
+          <option value="Pacific/Marquesas">(UTC-09:30) Marquesas Islands</option>
+          <option value="America/Anchorage">(UTC-09:00) Alaska</option>
+          <option value="America/Tijuana">(UTC-08:00) Baja California</option>
+          <option value="America/Los_Angeles">(UTC-08:00) Pacific Time (US and Canada)</option>
+          <option value="America/Phoenix">(UTC-07:00) Arizona</option>
+          <option value="America/Chihuahua">(UTC-07:00) Chihuahua, La Paz, Mazatlan</option>
+          <option value="America/Denver">(UTC-07:00) Mountain Time (US and Canada)</option>
+          <option value="America/Belize">(UTC-06:00) Central America</option>
+          <option value="America/Chicago">(UTC-06:00) Central Time (US and Canada)	</option>
+          <option value="Pacific/Easter">(UTC-06:00) Easter Island</option>
+          <option value="America/Mexico_City">(UTC-06:00) Guadalajara, Mexico City, Monterrey</option>
+          <option value="America/Regina">(UTC-06:00) Saskatchewan</option>
+          <option value="America/Bogota">(UTC-05:00) Bogota, Lima, Quito</option>
+          <option value="America/Cancun">(UTC-05:00) Chetumal</option>
+          <option value="America/New_York">(UTC-05:00) Eastern Time (US and Canada)</option>
+          <option value="America/Port-au-Prince">(UTC-05:00) Haiti</option>
+          <option value="America/Havana">(UTC-05:00) Havana</option>
+          <option value="America/Indiana/Indianapolis">(UTC-05:00) Indiana (East)</option>
+          <option value="America/Asuncion">(UTC-04:00) Asuncion</option>
+          <option value="America/Halifax">(UTC-04:00) Atlantic Time (Canada)</option>
+          <option value="America/Caracas">(UTC-04:00) Caracas</option>
+          <option value="America/Cuiaba">(UTC-04:00) Cuiaba</option>
+          <option value="America/Manaus">(UTC-04:00) Georgetown, La Paz, Manaus, San Juan</option>
+          <option value="America/Santiago">(UTC-04:00) Santiago</option>
+          <option value="America/Grand_Turk">(UTC-04:00) Turks and Caicos</option>
+          <option value="America/St_Johns">(UTC-03:30) Newfoundland</option>
+          <option value="America/Fortaleza">(UTC-03:00) Araguaina</option>
+          <option value="America/Sao_Paulo">(UTC-03:00) Brasilia</option>
+          <option value="America/Cayenne">(UTC-03:00) Cayenne, Fortaleza</option>
+          <option value="America/Buenos_Aires">(UTC-03:00) City of Buenos Aires</option>
+          <option value="America/Godthab">(UTC-03:00) Greenland</option>
+          <option value="America/Montevideo">(UTC-03:00) Montevideo</option>
+          <option value="America/Miquelon">(UTC-03:00) Saint Pierre and Miquelon</option>
+          <option value="America/Bahia">(UTC-03:00) Salvador</option>
+          <option value="America/Noronha">(UTC-02:00) Fernando de Noronha</option>
+          <option value="Atlantic/Azores">(UTC-01:00) Azores</option>
+          <option value="Atlantic/Cape_Verde">(UTC-01:00) Cabo Verde Islands</option>
+          <option value="UTC">(UTC+00:00) UTC, GMT</option>
+          <option value="Africa/Casablanca">(UTC+00:00) Casablanca</option>
+          <option value="Europe/London">(UTC+00:00) Dublin, Edinburgh, Lisbon, London</option>
+          <option value="Africa/Monrovia">(UTC+00:00) Monrovia, Reykjavik</option>
+          <option value="Europe/Amsterdam">(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+          <option value="Europe/Belgrade">(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+          <option value="Europe/Brussels">(UTC+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+          <option value="Europe/Warsaw">(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+          <option value="Africa/Algiers">(UTC+01:00) West Central Africa</option>
+          <option value="Africa/Windhoek">(UTC+01:00) Windhoek</option>
+          <option value="Asia/Amman">(UTC+02:00) Amman</option>
+          <option value="Europe/Athens">(UTC+02:00) Athens, Bucharest</option>
+          <option value="Asia/Beirut">(UTC+02:00) Beirut</option>
+          <option value="Africa/Cairo">(UTC+02:00) Cairo</option>
+          <option value="Asia/Damascus">(UTC+02:00) Damascus</option>
+          <option value="Asia/Gaza">(UTC+02:00) Gaza, Hebron</option>
+          <option value="Africa/Harare">(UTC+02:00) Harare, Pretoria</option>
+          <option value="Europe/Helsinki">(UTC+02:00) Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius</option>
+          <option value="Asia/Jerusalem">(UTC+02:00) Jerusalem</option>
+          <option value="Europe/Kaliningrad">(UTC+02:00) Kaliningrad</option>
+          <option value="Africa/Tripoli">(UTC+02:00) Tripoli</option>
+          <option value="Asia/Baghdad">(UTC+03:00) Baghdad</option>
+          <option value="Asia/Istanbul">(UTC+03:00) Istanbul</option>
+          <option value="Asia/Kuwait">(UTC+03:00) Kuwait, Riyadh</option>
+          <option value="Europe/Minsk">(UTC+03:00) Minsk</option>
+          <option value="Europe/Moscow">(UTC+03:00) Moscow, St. Petersburg, Volgograd</option>
+          <option value="Africa/Nairobi">(UTC+03:00) Nairobi</option>
+          <option value="Asia/Tehran">(UTC+03:30) Tehran</option>
+          <option value="Asia/Muscat">(UTC+04:00) Abu Dhabi, Muscat</option>
+          <option value="Europe/Astrakhan">(UTC+04:00) Astrakhan, Ulyanovsk</option>
+          <option value="Asia/Baku">(UTC+04:00) Baku</option>
+          <option value="Europe/Samara">(UTC+04:00) Izhevsk, Samara</option>
+          <option value="Indian/Mauritius">(UTC+04:00) Port Louis</option>
+          <option value="Asia/Tbilisi">(UTC+04:00) Tbilisi</option>
+          <option value="Asia/Yerevan">(UTC+04:00) Yerevan</option>
+          <option value="Asia/Kabul">(UTC+04:30) Kabul</option>
+          <option value="Asia/Tashkent">(UTC+05:00) Tashkent, Ashgabat</option>
+          <option value="Asia/Yekaterinburg">(UTC+05:00) Ekaterinburg</option>
+          <option value="Asia/Karachi">(UTC+05:00) Islamabad, Karachi</option>
+          <option value="Asia/Kolkata">(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+          <option value="Asia/Colombo">(UTC+05:30) Sri Jayawardenepura</option>
+          <option value="Asia/Katmandu">(UTC+05:45) Kathmandu</option>
+          <option value="Asia/Almaty">(UTC+06:00) Astana</option>
+          <option value="Asia/Dhaka">(UTC+06:00) Dhaka</option>
+          <option value="Asia/Novosibirsk">(UTC+06:00) Novosibirsk</option>
+          <option value="Asia/Rangoon">(UTC+06:30) Yangon (Rangoon)</option>
+          <option value="Asia/Bangkok">(UTC+07:00) Bangkok, Hanoi, Jakarta</option>
+          <option value="Asia/Barnaul">(UTC+07:00) Barnaul, Gorno-Altaysk</option>
+          <option value="Asia/Hovd">(UTC+07:00) Hovd</option>
+          <option value="Asia/Krasnoyarsk">(UTC+07:00) Krasnoyarsk</option>
+          <option value="Asia/Tomsk">(UTC+07:00) Tomsk</option>
+          <option value="Asia/Chongqing">(UTC+08:00) Beijing, Chongqing, Hong Kong SAR, Urumqi</option>
+          <option value="Asia/Irkutsk">(UTC+08:00) Irkutsk</option>
+          <option value="Asia/Kuala_Lumpur">(UTC+08:00) Kuala Lumpur, Singapore</option>
+          <option value="Australia/Perth">(UTC+08:00) Perth</option>
+          <option value="Asia/Taipei">(UTC+08:00) Taipei</option>
+          <option value="Asia/Ulaanbaatar">(UTC+08:00) Ulaanbaatar</option>
+          <option value="Asia/Pyongyang">(UTC+08:30) Pyongyang</option>
+          <option value="Australia/Eucla">(UTC+08:45) Eucla</option>
+          <option value="Asia/Chita">(UTC+09:00) Chita</option>
+          <option value="Asia/Tokyo">(UTC+09:00) Osaka, Sapporo, Tokyo</option>
+          <option value="Asia/Seoul">(UTC+09:00) Seoul</option>
+          <option value="Asia/Yakutsk">(UTC+09:00) Yakutsk</option>
+          <option value="Australia/Adelaide">(UTC+09:30) Adelaide</option>
+          <option value="Australia/Darwin">(UTC+09:30) Darwin</option>
+          <option value="Australia/Brisbane">(UTC+10:00) Brisbane</option>
+          <option value="Australia/Canberra">(UTC+10:00) Canberra, Melbourne, Sydney</option>
+          <option value="Pacific/Guam">(UTC+10:00) Guam, Port Moresby</option>
+          <option value="Australia/Hobart">(UTC+10:00) Hobart</option>
+          <option value="Asia/Vladivostok">(UTC+10:00) Vladivostok</option>
+          <option value="Australia/Lord_Howe">(UTC+10:30) Lord Howe Island</option>
+          <option value="Pacific/Bougainville">(UTC+11:00) Bougainville Island</option>
+          <option value="Asia/Srednekolymsk">(UTC+11:00) Chokirdakh</option>
+          <option value="Asia/Magadan">(UTC+11:00) Magadan</option>
+          <option value="Pacific/Norfolk">(UTC+11:00) Norfolk Island</option>
+          <option value="Asia/Sakhalin">(UTC+11:00) Sakhalin</option>
+          <option value="Pacific/Guadalcanal">(UTC+11:00) Solomon Islands, New Caledonia</option>
+          <option value="Asia/Anadyr">(UTC+12:00) Anadyr, Petropavlovsk-Kamchatsky</option>
+          <option value="Pacific/Auckland">(UTC+12:00) Auckland, Wellington</option>
+          <option value="Pacific/Fiji">(UTC+12:00) Fiji Islands</option>
+          <option value="Pacific/Chatham">(UTC+12:45) Chatham Islands</option>
+          <option value="Pacific/Tongatapu">(UTC+13:00) Nuku'alofa</option>
+          <option value="Pacific/Apia">(UTC+13:00) Samoa</option>
+          <option value="Pacific/Kiritimati">(UTC+14:00) Kiritimati Island</option>
+        </select>
+      </div>
+      <div class="ml-sm-auto col-md-6 col-md-offset-2 col-12 d-flex justify-content-around justify-content-sm-end">
+        <a class="footer-link" href="/faq">FAQ</a>
+        <a class="footer-link ml-5" href="/privacy">Privacy policy</a>
+        <a class="footer-link ml-5" href="/cdn-cgi/l/email-protection#691a1c1919061b1d291d1e001d0a01040c1d1b000a1a47070c1d">Contact</a>
+        <a class="open_hs_beacon footer-link ml-5" href="#">
+          <strong>Need more data?</strong>
+</a>          <a class="footer-link ml-5" href="/auth/signin">Sign in</a>
+      </div>
+    </div>
+    <div class="footer-footer d-flex flex-wrap justify-content-center justify-content-sm-end text-muted">
+      <div class="mr-sm-auto"><em>© 2018 Twitchmetrics</em></div>
+      <div>This site is not affiliated with Twitch or any of their partners.</div>
+    </div>
+  </div>
+</footer>
+
+<div id="modal-async" class="modal" tabindex="-1" data-backdrop="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Help Scout
+  !function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!1,baseUrl:""},contact:{enabled:!0,formId:"9bd4e9bd-17fd-11e8-b466-0ec85169275a"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});
+  HS.beacon.config({
+    color: "#4d394b",
+    topics: [
+      { val: "data-api", label: "I'm looking for an API" },
+      { val: "data-events", label: "I'm looking for detailed viewership data about specific gaming events like Overwatch League or GDQ" },
+      { val: "data-engagement", label: "I want engagement metrics like subscriber count" },
+      { val: "data-sponsorship", label: "I'm looking for sponsorship data (e.g. This channel is sponsored by X brand)" },
+      { val: "data-historical", label: "I need historical data that goes back more than 90 days" },
+      { val: "data-demographics", label: "I'm looking for viewer demographics data like age group and interests." }
+    ],
+    modal: true,
+    attachment: true,
+    poweredBy: false,
+    instructions: "Need more data? Tell us what you're looking for and we'll get back to you with quickly."
+  });
+  $(function() {
+    $('.open_hs_beacon').click(function() {
+      HS.beacon.open();
+      return false;
+    });
+  });
+  // end Help Scout
+</script>
+</body>
+</html>
