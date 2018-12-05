@@ -26,7 +26,7 @@ if req.status_code == 200:
     display(img)
     
 else:
-    print(f"Error! We're receiving an error " {req.status_code})
+    print(f"Error! We're receiving an error {req.status_code}")
     
 
 
